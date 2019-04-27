@@ -19,24 +19,24 @@ Sebelum melakukan pembuatan grafik, Anda harus terlebih dahulu mengetahui inform
 
 ```{r explore-iris1}
 iris # mencetak data di konsol
-dim(iris) # ___
-str(iris) # ___
-colnames(iris) # ___
-head(iris) # ___
-tail(iris) # ___
-summary(iris) # ___
+dim(iris) # jumlah baris dan kolom
+str(iris) # melihat struktur data
+colnames(iris) # melihat nama kolom
+head(iris) # melihat 6 baris teratas
+tail(iris) # melihat 6 baris terbawah
+summary(iris) # melihat ringkasan data
 iris$Sepal.Length # ekstraksi kolom 'Sepal.Length' dari dataset iris. Jalankan help(`[`) untuk membaca dokumentasi
-class(iris$Species) # ___
-length(iris$Petal.Width) # ___
-levels(iris$Species) # ___
-length(levels(iris$Species)) # ___
-unique(iris$Species) # ___
-length(unique(iris$Species)) # ___
-mean(iris$Sepal.Length) # ___
-sd(iris$Sepal.Length) # ___
-median(iris$Sepal.Width) # ___
-sum(iris$Petal.Length) # ___
-cor(iris[, -5]) # ___
+class(iris$Species) # melihat class species
+length(iris$Petal.Width) # jumlah kolom spesies
+levels(iris$Species) # melihat level pada spesies
+length(levels(iris$Species)) # jumah level pada spesies
+unique(iris$Species) # menunjukan spesies yang unik
+length(unique(iris$Species)) # jumlah data spesies yang unik
+mean(iris$Sepal.Length) # menunjukan mean 
+sd(iris$Sepal.Length) # menunjukan sd
+median(iris$Sepal.Width) # menunjukan median
+sum(iris$Petal.Length) # menunjukan jumlah
+cor(iris[, -5]) # menghitung relasi antara variable numerik dan iris 
 ```
 
 Selain fungsi-fungsi di atas Anda juga dapat mendapat informasi mengenai dataset dengan menggunakan fungsi `vis_dat()` dari paket `visdat` dan fungsi `skim()` dari paket `skimr`. Pasanglah kedua paket tersebut terlebih dahulu melalui menu **Tools -- Install Packages...** jika Anda belum memasangnya. Perhatikan contoh penggunaan fungsi `vis_dat()` dan `skim()` pada *chunk* berikut!
@@ -56,7 +56,7 @@ skim(typical_data)
 Aktivitas pembuatan grafik tidak dapat dilepaskan dari aktivitas transformasi data. Salah satu paket yang umum digunakan untuk melakukan transformasi data adalah dplyr. Sekarang aktifkanlah paket tersebut dengan cara mengganti bagian ___ dengan jawaban yang tepat! (Catatan: jika Anda belum memasang paket dplyr, pasanglah paket tersebut terlebih dahulu melalui menu **Tools -- Install Packages...**)
 
 ```{r load-package}
-library(___)
+library(dplyr)
 ```
 
 Terdapat beberapa fungsi utama dari paket dplyr untuk melakukan transformasi data, diantaranya:

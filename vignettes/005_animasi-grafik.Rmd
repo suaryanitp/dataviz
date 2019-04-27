@@ -16,8 +16,9 @@ knitr::opts_chunk$set(echo = TRUE, fig.align = "center", message = FALSE, warnin
 Pembuatan animasi dari grafik statis yang diolah menggunakan paket ggplot2 dapat dilakukan dengan menggunakan paket gganimate. Anda dipersilahkan untuk mengaktifkan kedua paket tersebut dengan mengisi bagian ___ berikut dengan jawaban yang tepat. Selain itu dalam modul ini kita akan menggunakan tema flat dark dari paket ggthemr (paket ggthemr dapat dipasang dengan menjalankan fungsi `remotes::install_github('cttobin/ggthemr')`).
 
 ```{r load-package}
-library(___)
-library(___)
+library(ggplot2)
+library(gganimate)
+remotes::install_github('cttobin/ggthemr')
 library(ggthemr) # Dipasang dengan cara menjalankan kode: remotes::install_github('cttobin/ggthemr')
 ggthemr("flat dark", type = "outer") # Anda juga dapat menggunakan tema lain. Pilihan tema dapat dilihat di https://github.com/cttobin/ggthemr#palettes
 ```
